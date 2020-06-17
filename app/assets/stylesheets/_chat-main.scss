@@ -4,13 +4,72 @@
   &__group-info{
     height: 100px;
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      padding-top: 35px;
+      padding-left: 40px;
+      &__name{
+      color: #333333;
+      font-size: 20px;
+      }
+      &__member{
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__right{
+      padding-top: 28px;
+      padding-right: 40px;
+      display: flex;
+      &__btn{
+        width: 72px;
+        height: 40px;
+        color: #38aef0;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid;
+        border-color: #38aef0;
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
   }
   &__message-list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    padding-top: 35px;
+    &__box{
+      padding-left: 40px;
+      padding-bottom: 46px;
+      .list-info{
+        display: flex;
+        align-items: center;
+      }
+      .list-name{
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .list-time{
+        color: #999999;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      .sent-message{
+        color: #434a54;
+        font-size: 14px;
+        margin-top: 12px;
+      }
+    }
   }
   &__message-form{
     height: 90px;
     background-color: #d2d2d2;
+    &__list{
+      margin: 0 auto;
+      align-items: center;
+    }
   }
 }
