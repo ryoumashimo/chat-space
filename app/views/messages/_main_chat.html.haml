@@ -43,11 +43,11 @@
         おはよう
   .chat-main__message-form
     .chat-main__message-form__list
-      = form_tag '#', class:"new_message" do
+      = form_for [@group, @message], class:"new_message" do |f|
         .input-box
-          = text_field_tag :message, '', class: "input-box__text", placeholder: "type a message"
-          = label_tag :image, class:"input-box__image" do
+          = f.text_field :content, class: "input-box__text", placeholder: "type a message"
+          = f.label :image, class:"input-box__image" do
             = icon('far', 'image')
-            = file_field_tag :image, class: "input-box__image__file"
+            = f.file_field :image, class: "input-box__image__file"
         .input-form
-          = submit_tag "Send", class: "form-btn"
+          = f.submit "Send", class: "form-btn"
