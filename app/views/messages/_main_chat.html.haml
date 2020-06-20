@@ -43,7 +43,10 @@
         おはよう
   .chat-main__message-form
     .chat-main__message-form__list
-      .input-form
-        .message-text
-        .image-icon
-      .sending-btn
+      = form_tag class:"new_message" do
+        .input-box
+          = text_field_tag placeholder: "type a message", class: "input-box__text"
+          = label_tag class: "input-box__image" do
+            = icon('far', 'image')
+            = file_field_tag class: "input-box__image__file"
+        = submit_tag "Send"
