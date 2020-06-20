@@ -2,45 +2,16 @@
   .chat-main__group-info
     .chat-main__group-info__left
       .chat-main__group-info__left__name
-        test
+        = @group.name
       .chat-main__group-info__left__member
-        Member:name
+        Member:
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .chat-main__group-info__right
-      = link_to "#", class: 'chat-main__group-info__right__btn' do
+      = link_to edit_group_path(@group), class: 'chat-main__group-info__right__btn' do
         Edit
   .chat-main__message-list
-    .chat-main__message-list__box
-      .list-info
-        .list-name
-          =current_user.name
-        .list-time
-          2020/06/17[Wed]21:05:03
-      .sent-message
-        おはよう
-    .chat-main__message-list__box
-      .list-info
-        .list-name
-          ryo
-        .list-time
-          2020/06/17[Wed]21:05:03
-      .sent-message
-        おはよう
-    .chat-main__message-list__box
-      .list-info
-        .list-name
-          ryo
-        .list-time
-          2020/06/17[Wed]21:05:03
-      .sent-message
-        おはよう
-    .chat-main__message-list__box
-      .list-info
-        .list-name
-          ryo
-        .list-time
-          2020/06/17[Wed]21:05:03
-      .sent-message
-        おはよう
+    = render @messages
   .chat-main__message-form
     .chat-main__message-form__list
       = form_for [@group, @message], class:"new_message" do |f|
