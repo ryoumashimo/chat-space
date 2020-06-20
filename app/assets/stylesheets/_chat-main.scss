@@ -70,11 +70,42 @@
     &__list{
       margin: 0 auto;
       align-items: center;
-      .input-box{
-        margin: 0 auto;
-        align-items: center;
-        &__text{
-          color: #999999;
+      display: flex;
+      .new_message{
+        display: flex;
+        margin-top: 20px;
+        .input-box{
+          margin: 0 auto;
+          align-items: center;
+          position: relative;
+          display: flex;
+          height: 50px;
+          width: calc(100vw - 495px);
+          margin-left: 40px;
+          background-color: #ffffff;
+          &__text{
+            color: #999999;
+            padding-left: 10px;
+            line-height: 50px;
+            align-items: center;
+            width: 100%;
+          }
+          &__image{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 30px;
+            &__file{
+              display: none;
+            }
+          }
+        }
+        .form-btn{
+          background-color: #38aef0;
+          color: #ffffff;
+          height: 50px;
+          width: 100px;
+          margin-left: 15px;
         }
       }
     }
