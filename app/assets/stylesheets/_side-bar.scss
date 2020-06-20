@@ -33,18 +33,23 @@
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    &__group{
+    .group{
       margin: 0 auto;
       height: 91px;
       width: 260px;
       padding-top: 20px;
       padding-bottom: 40px;
+      .group-lists{
+        text-decoration: none;
+      }
       .group-name{
         font-size: 15px;
+        color: #ffffff;
       }
       .group-message{
         font-size: 11px;
         margin-top: 5px;
+        color: #ffffff;
       }
     } 
   }
